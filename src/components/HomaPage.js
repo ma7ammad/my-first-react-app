@@ -1,3 +1,4 @@
+//example of using function components in react
 import React from "react";
 
 function HomePage() {

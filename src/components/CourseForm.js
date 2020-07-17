@@ -3,7 +3,8 @@ import TextInput from "./common/TextInpt";
 
 function CourseForm(props) {
   return (
-    <form>
+    //declaring the 'onSubmit' on the 'form' rather than the 'btn' so that even if user hits the Enter key the form would submit
+    <form onSubmit={props.onSubmit}>
       <TextInput
         id="title"
         label="Title"

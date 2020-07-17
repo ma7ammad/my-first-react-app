@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CourseList(props) {
   return (
@@ -16,9 +17,11 @@ function CourseList(props) {
           return (
             // key to resolve Warning: Each child in a list should have a unique "key" prop.
             <tr key={course.id}>
-              <th>{course.title}</th>
-              <th>{course.authorId}</th>
-              <th>{course.category}</th>
+              <td>
+                <Link to={"/course/" + course.slug}>{course.title}</Link>
+              </td>
+              <td>{course.authorId}</td>
+              <td>{course.category}</td>
             </tr>
           );
         })}

@@ -2,7 +2,7 @@
 A Template object for the CourseForm with error handling
 */
 import React from "react";
-import Prototypes from "prop-types";
+import PropTypes from "prop-types";
 function TextInput(props) {
   let wrapperClass = "form-group";
   //   if (props.error && props.error.length > 0) {
@@ -19,7 +19,7 @@ function TextInput(props) {
           name={props.name}
           onChange={props.onChange}
           className="form-control"
-          value={props.value} // if no title passed set to empty string
+          value={props.value}
         />
       </div>
       {props.error && <div className="alert alert-danger">{props.error}</div>}
@@ -27,13 +27,13 @@ function TextInput(props) {
   );
 }
 
-TextInput.Prototypes = {
-  id: Prototypes.string.isRequired,
-  name: Prototypes.string.isRequired,
-  label: Prototypes.string.isRequired,
-  onChange: Prototypes.func.isRequired,
-  value: Prototypes.string,
-  error: Prototypes.string,
+TextInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string,
+  error: PropTypes.string,
 };
 
 TextInput.defaultProps = {

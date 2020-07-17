@@ -27,6 +27,9 @@ function CourseForm(props) {
             <option value="" />
             <option value="1">Cory House</option>
             <option value="2">Scott Allen</option>
+            <option value="3">Dan Wahlin</option>
+            <option value="4">Mark Heath</option>
+            <option value="5">Rag Dhiman</option>
           </select>
         </div>
         {props.errors.authorId && (

@@ -12,11 +12,13 @@ function App() {
     <div className="container-fluid">
       <Header />
       {/* Switch statement to exit once a matching path is found, preventing NotFoundPage being displayed on all pages */}
+      {/* More secific routes should be listed firs */}
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/courses" component={CoursesPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/course/:slug" component={ManageCoursePage} />
+        <Route path="/course/" component={ManageCoursePage} />
         <Redirect from="/about-page" to="about" />
         <Route component={NotFoundPage} />
       </Switch>
